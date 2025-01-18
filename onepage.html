@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankush - Portfolio</title>
+  <link rel="stylesheet" href="onpage.css">
+  
+  <link rel="stylesheet" href="preloader.css">
+  <link rel="stylesheet" href="common.css">
+
+
+
+  <!-- favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+
+
+
+
+
+  
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- preloader -->
+<div id="preloader">
+  <div></div>
+</div>
+
+
+
+
+
+  <!-- Sticky Header -->
+  <header class="sticky-header">
+    <div class="container">
+      <h1 class="logo">Ankush.</h1>
+      <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="services.html">Services</a>
+        <a href="onepage.html" class="active">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+
+      <div class="hamburger" id="hamburger" >
+        <i class="fas fa-bars"></i>
+    </div>
+    <!-- Close Icon (hidden by default) -->
+<div><i id="close" class="fas fa-times close-icon" style="color: white;"></i></div>
+
+
+    <div class="kkuu">
+        <!-- <div id="close" class="close-icon">✖</div> -->
+    <div class="kllu">
+        <nav class="mnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="services.html">Services</a>
+        <a href="onepage.html" class="active">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    </div>
+</div>
+</div>
+    </div>
+  </header>
+
+
+<!-- main box -->
+ <div class="parent-container">
+ <div class="black-box" id="portfolio" class="portfolio">
+
+
+
+
+  <!-- Portfolio Section -->
+  <!-- <section class="portfolio" id="portfolio"> -->
+    <h1>PORTFOLIO</h1>
+    <h2>MY WORKS</h2>
+
+
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="analysis">Analysis</button>
+      <button class="filter-btn" data-filter="ml">ML</button>
+      <button class="filter-btn" data-filter="other">Other</button>
+  </div>
+  
+  
+  <div class="grid">
+    <!-- Original Project -->
+    <div class="project-box" data-category="web" style="background-image: url('images/project1/show.png')">
+        <div class="overlay">
+            <div class="project-info">
+                <h3>Personal Site</h3>
+                
+                  <p>Web</p>
+                <div class="icons">
+                    <i class="fas fa-plus zoom-icon" onclick="zoomImage('images/project1/zoom.png')"></i>
+                    <i class="fas fa-link details-icon" onclick="openModal(0)"></i>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-box" data-category="analysis" style="background-image: url('images/project2/show.png')">
+          <div class="overlay">
+            <div class="project-info">
+                <h3>T20 2024 Cricket World Cup Analysis</h3>
+         
+                  <p>Analysis</p>
+                <div class="icons">
+                    <i class="fas fa-plus zoom-icon" onclick="zoomImage('images/project2/zoom.png')"></i>
+            <i class="fas fa-link details-icon" onclick="openModal(1)"></i>
+        </div>
+    </div>
+      </div>
+    </div>
+    
+    <div class="project-box" data-category="web" style="background-image: url('images/project3/show.png')">
+      <div class="overlay">
+        <div class="project-info">
+          <h3>Portfolio website </h3>
+            
+            <p>Web</p>
+            <div class="icons">
+              <i class="fas fa-plus zoom-icon" onclick="zoomImage('images/project3/zoom.png')"></i>
+              <i class="fas fa-link details-icon" onclick="openModal(2)"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-box" data-category="analysis" style="background-image: url('images/project4/show.png')">
+        <div class="overlay">
+          <div class="project-info">
+            <h3>HR Analytics Dashboard</h3>
+            
+            <p>Analysis</p>
+            <div class="icons">
+              <i class="fas fa-plus zoom-icon" onclick="zoomImage('images/project4/zoom.png')"></i>
+              <i class="fas fa-link details-icon" onclick="openModal(3)"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-box" data-category="web" style="background-image: url('images/project5/show.png')">
+      <div class="overlay">
+        <div class="project-info">
+          <h3>Analog Clock</h3>
+          
+          <p>Web</p>
+          <div class="icons">
+            <i class="fas fa-plus zoom-icon" onclick="zoomImage('images/project5/zoom.png')"></i>
+            <i class="fas fa-link details-icon" onclick="openModal(4)"></i>
+          </div>
+        </div>
+      </div>
+</div>
+      <div class="project-box" data-category="web" style="background-image: url('images/project6/show.png')">
+          <div class="overlay">
+              <div class="project-info">
+                  <h3>V card</h3>
+                 
+                    <p>Web</p>
+                  <div class="icons">
+                      <i class="fas fa-plus zoom-icon" onclick="zoomImage('images/project6/zoom.png')"></i>
+                      <i class="fas fa-link details-icon" onclick="openModal(5)"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- project add krte time a,b,c,zoom,show image add kre
+              data category bdle
+              h3
+              
+              p
+              title: 
+              description: 
+              category: 
+              client: 
+              date: 
+              url: 
+              skil:
+              ye sab v chnge krne h
+              zoom k time wala h3
+              -->
+              <!-- Add 8 more project boxes -->
+              
+              <!-- Repeat for more boxes with unique details -->
+              
+              
+              
+              
+              <div class="project-box" data-category="analysis" style="background-image: url('images/project7/show.png')">
+                <div class="overlay">
+                  <div class="project-info">
+            <h3>Hotel Reservation Cancellation Analysis and Report Creation</h3>
+            
+            <p>Analysis</p>
+            <div class="icons">
+              
+              <i class="fas fa-plus zoom-icon" onclick="zoomImage('images/project7/zoom.png')"></i>
+              <i class="fas fa-link details-icon" onclick="openModal(6)"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+
+<!-- Continue to add up to 9 boxes as needed -->
+</div>
+
+
+
+
+
+
+  <!-- </section> -->
+
+
+
+
+</div>
+</div>
+
+
+
+  <!-- Modal Section -->
+
+<!-- Modal Section -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="projectName" class="modal-title">Info:</h2>
+    <div class="modal-body">
+      <!-- Left Section (Carousel) -->
+      <div class="modal-left">
+        <div class="carousel-box">
+          <img src="" alt="Project Image 1" class="carousel-image active">
+          <img src="" alt="Project Image 2" class="carousel-image">
+          <img src="" alt="Project Image 3" class="carousel-image">
+        </div>
+        <div class="carousel-indicators">
+          <span class="indicator active" onclick="showImage(0)"></span>
+          <span class="indicator" onclick="showImage(1)"></span>
+          <span class="indicator" onclick="showImage(2)"></span>
+        </div>
+      </div>
+      <!-- Right Section (Details) -->
+      <div class="modal-right">
+        <h2 id="projectTitle">This is an example of portfolio detail</h2>
+        <div class="project-info">
+          <p><strong>Category: </strong> <span id="projectCategory"></span></p>
+          <p><strong>Client: </strong> <span id="projectClient"></span></p>
+          <p><strong>Project Date: </strong> <span id="projectDate"></span></p>
+          <p><strong>Project: </strong> 
+            <a id="projectUrl" href="#" target="_blank">Visit</a>
+            <!-- Link Button -->
+            <!-- <button class="link-btn" onclick="openLinkOverlay()">View Details</button> -->
+          </p>
+        </div>
+        <p id="projectDescription">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem repudiandae officia necessitatibus.
+        </p>
+        <p><strong>Skill: </strong> <span id="projectSkill"></span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Link Overlay -->
+<div id="linkOverlay">
+  <!-- Close Icon -->
+  <div id="closeLinkIcon">&times;</div>
+  
+  <!-- Link Content -->
+  <div id="linkContent" >
+    <h2 id="projectHeading"></h2>
+    <p id="projectDescriptionOverlay"></p>
+    <a id="projectLink" href="#" target="_blank">Visit Project</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Zoom Overlay -->
+ <div id="claa">
+  <!-- Close Icon -->
+  <div id="closeIcon">&times;</div>
+<div id="zoomOverlay" class="zoom-overlay">
+  <!-- Zoomed Image -->
+  <img id="zoomedImage" src="" alt="Zoomed Image">
+  
+  <!-- Description Section -->
+  <div id="imageDescription" >
+    <h3 id="hee">________</h3>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+<footer>
+  <span class="design-text">Designed by</span> <span class="ankush-text">Ankush</span>
+</footer>
+
+  
+
+  <script src="preloader.js"></script>
+  <script src="common.js"></script>
+  <script src="onpage.js"></script>
+</body>
+</html>

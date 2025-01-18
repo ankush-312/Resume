@@ -1,0 +1,1100 @@
+
+
+*{
+    /* border: 2px solid green; */
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  
+}
+body {
+  font-family: 'Poppins', sans-serif;  /* More modern font */
+    color: white;
+    /* background-color: rgb(235, 0, 0); */
+    background-image: url('images/banner.png');
+    background-size: cover;
+    position: relative;
+    background-position:right;
+    background-attachment: fixed; /* Ensures background is fixed */
+    /* padding-top: 60px; Adjust to the height of your header to start background after it */
+}
+
+
+
+
+
+/* Add this to the existing black-box class */
+.black-box {
+  background-color: rgba(0, 0, 0, 0.9);  /* Keep the black background */
+  backdrop-filter: blur(9px);
+  /* opacity: 100%; */
+  padding: 0 0px;           /* Add left and right padding */
+  margin: 20px auto;         /* Optional: to center it horizontally with margin on top and bottom */
+  max-width: 1320px;         /* Optional: Limit the width of the black box */
+  padding: 25px;
+}
+
+
+
+/* filter buttons */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.filter-btn {
+  height: 33px;
+  width: 60px;
+    /* padding: 8px 20px; */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background-color: rgba(3,237,108,0.85);
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Portfolio Grid */
+
+
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 360px); /* Adjust to fit the new size */
+    justify-content: center; /* Center the grid in its container */
+    gap: 20px; /* Space between boxes */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  
+  .project-box {
+    position: relative;
+    width: 360px; /* Adjusted width */
+    height: 270px; /* 4:3 aspect ratio: height = width * 0.75 */
+    background-size: cover;
+    background-position: center;
+    /* background: #000; */
+    border-radius: 2px;
+    overflow: hidden;
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+    margin: auto; /* Center-align the boxes within the grid cells */
+    margin-bottom: 20px;
+    /* padding-bottom: 40px; */
+ 
+    opacity: 1; /* All projects are visible initially */
+    transform: translateY(0); /* All projects are in their original position */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and position */
+  }
+  
+
+
+
+
+
+
+  
+
+/* Ensure that all project boxes are visible initially *//* Ensure that all project boxes are visible initially */
+.project-box {
+  position: relative;
+  opacity: 1; /* Start as fully visible */
+  transform: scale(1); /* No scaling effect initially */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transitions */
+}
+
+/* Adding .show class to make sure all projects are visible initially */
+.project-box.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* When the filter hides certain projects, remove show class */
+.project-box:not(.show) {
+  opacity: 0;
+  transform: scale(0.5); /* Slightly scale down when hidden */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Shorter transition for hiding */
+}
+
+/* Pop effect animation for the transition */
+@keyframes popEffect {
+  0% {
+      transform: scale(0.5);
+      opacity: 0;
+  }
+  50% {
+      transform: scale(1.05);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+.project-box.popEffect {
+  animation: popEffect 0.7s ease forwards;
+}
+
+/* Button hover effect */
+.filter-btn {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+  transform: scale(1.1);
+  background-color: #00ff77;
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+  .project-box h3{
+    color: white;
+    margin-bottom: 0;
+    justify-content: center;
+text-align: center;
+  }
+.project-box p{
+  color: #18D26E;
+justify-content: center;
+text-align: center;
+margin-top: 0;
+}
+  .project-box::before,
+  .project-box::after {
+      content: '';
+      position: absolute;
+      width: 50px; /* Thickness of the L-shape */
+      height: 50px;
+      border: 3px solid rgb(255, 255, 255); /* L-shape border color */
+      z-index: 1;
+      opacity: 0; /* Start invisible */
+      transition: 0.3s ease-in-out;
+      transform: scale(1);
+  }
+  
+
+/* Top-left corner L-shape */
+.project-box::before {
+    top: 5px; /* Position slightly inside the box */
+    left: 5px;
+    border-bottom: none; /* Remove bottom border */
+    border-right: none;  /* Remove right border */
+}
+
+/* Bottom-right corner L-shape */
+.project-box::after {
+    bottom: 5px; /* Position slightly inside the box */
+    right: 5px;
+    border-top: none; /* Remove top border */
+    border-left: none; /* Remove left border */
+}
+
+/* Hover effect */
+
+.project-box:hover::before,
+.project-box:hover::after {
+    opacity: 1; /* Make visible */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.project-box:hover {
+    transform: scale(1.05);
+    /* box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1); */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* Initially transparent */
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              backdrop-filter 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transition */
+  overflow: hidden; /* Ensures the animation stays within bounds */
+}
+
+.overlay::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.6); /* Darker for more contrast */
+  transform: translate(-50%, -50%);
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              height 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.5s ease-out; /* Smooth expansion */
+  z-index: -1; /* Ensures it appears behind overlay content */
+}
+
+.project-box {
+  position: relative;
+  overflow: hidden; /* Makes sure the overlay stays confined */
+  z-index: 1;
+}
+
+.project-box:hover .overlay {
+  opacity: 1;
+  backdrop-filter: blur(10px); /* Sexy blur effect */
+}
+
+.project-box:hover .overlay::before {
+  width: 130%; /* Larger expansion for a dramatic effect */
+  height: 130%;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.3); /* Soft glow and depth */
+}
+
+.overlay > * {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95); /* Slightly smaller for more graceful movement */
+  transition: opacity 0.4s ease, transform 0.4s ease-out;
+}
+
+.project-box:hover .overlay > * {
+  opacity: 1;
+  transform: translateY(0) scale(1); /* Smooth slide-in with scaling */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.project-info{
+  margin-bottom: 30px;
+}
+.project-info h3 {
+  font-size: 20px;
+  color: #fff;
+}
+
+.icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icons i {
+  font-size: 24px;
+  color: #fff;
+  margin: 0 3px;
+  cursor: pointer;
+}
+
+.icons i:hover {
+  color: rgb(0, 255, 0);
+}
+
+/* Modal */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Modal */
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+
+  /* To ensure your custom styles take precedence over Bootstrap's styles, use a more specific selector or add !important: */
+  background: rgba(0, 0, 0, 0.2) !important; /* Or your custom background color */
+
+
+
+
+  /* background: rgba(0, 0, 0, 0.1); */
+  width: 100%;
+  height: 100%;
+  /* max-width: 1200px; */
+  border-radius: 10px;
+  padding: 120px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal-title {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 15px;
+  margin-left: 50px;
+}
+
+.modal-body {
+  display: flex;
+  gap: 40px;
+  padding: 0px !important; /* bootstrap ko overlap krne k liye */
+}
+
+.modal-body h2 {
+  width: 100%;
+}
+
+/* Modal Left (Carousel in Box) */
+.modal-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-image.active {
+  opacity: 1;
+}
+
+
+.carousel-box {
+  width: 700px;
+  height: 463px;
+  margin-left: 50px;
+  background: #00000000;
+  border-radius: 0px;
+  overflow: hidden;
+  position: relative; /* Keep this to allow absolute positioning */
+  margin-bottom: 1px;
+}
+
+
+
+.carousel-indicators {
+  display: flex ;
+  justify-content: center ;
+  position: absolute ;
+  bottom: calc(-2vh); /* Set the distance to 2vh below the carousel box */
+  left: 30% ; /* Position it at the center horizontally */
+  transform: translateX(-50%) ; /* Ensure it’s perfectly centered */
+  z-index: 2 ; /* Keep it above the image */
+  width: auto ; /* Make sure the width is based on the content */
+  padding: 0 ; /* Reset any unwanted padding */
+  margin: 0 ; /* Reset any unwanted margin */
+  margin-left: 400px !important;
+}
+/* .carousel-indicators {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: auto;
+  padding: 0;
+  margin: 0;
+} */
+
+
+
+
+
+
+
+
+
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background: rgba(3,237,108,0.85);
+}
+
+/* Modal Right (Details) */
+.modal-right {
+  flex: 1;
+  color: #fff;
+  margin-top: 30px;
+}
+
+.modal-right h2 {
+  font-size: 40px;
+  font-weight: 400 !important;
+  margin-bottom: 20px;
+}
+
+.modal-right .project-info p {
+  margin: 10px 5px;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+.modal-right a {
+  color: rgba(3,237,108,0.85);
+  text-decoration: none;
+}
+
+.modal-right a:hover {
+  text-decoration: underline;
+}
+
+/* Link Button */
+.link-btn {
+  background: #ff9800;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.link-btn:hover {
+  background: #e68900;
+}
+
+/* Link Overlay */
+#linkOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+#linkContent {
+  background: #000000;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#linkContent h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#linkContent p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+#linkContent a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+#linkContent a:hover {
+  text-decoration: none;
+}
+
+#closeLinkIcon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+#closeLinkIcon:hover {
+  color: #ff9800;
+}
+
+
+
+
+
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 20px;
+  }
+
+  .modal-left, .modal-right {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+
+  .carousel-box {
+    width: 100%;
+    /* height: auto; Adjust height for smaller screens */
+    margin-left: 0;
+  }
+
+  .carousel-image {
+    height: auto;
+  }
+
+  .modal-title {
+    font-size: 22px; /* Make the title smaller */
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .modal-body {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .carousel-indicators {
+    bottom: calc(40vh) !important; /* Position indicators lower for small screens */
+    /* left: calc(40vh); */
+    transform: translateX(-17vh) !important;
+    width: 100vw !important;
+    display: none !important;
+  }
+
+  .indicator {
+    width: 6px;
+    height: 6px;
+  }
+
+  .modal-right h2 {
+    font-size: 6vw;
+    /* font-size: 20px; */
+  }
+
+  .modal-right .project-info p {
+    font-size: 12px;
+  }
+
+  .modal-right a {
+    font-size: 14px;
+  }
+}
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .modal-content {
+    padding: 20px;
+  }
+
+  .modal-left, .modal-right {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+
+  .carousel-box {
+    width: 100%;
+    /* height: auto; Adjust height for smaller screens */
+    margin-left: 0;
+  }
+
+  .carousel-image {
+    height: auto;
+  }
+
+  .modal-title {
+    font-size: 22px; /* Make the title smaller */
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .modal-body {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .carousel-indicators {
+    bottom: calc(40vh) !important; /* Position indicators lower for small screens */
+    /* left: calc(40vh); */
+    transform: translateX(-17vh) !important;
+    width: auto !important;
+  }
+
+  .indicator {
+    width: 6px;
+    height: 6px;
+  }
+
+  .modal-right h2 {
+    font-size: 4vw;
+    /* font-size: 20px; */
+  }
+
+  .modal-right .project-info p {
+    font-size: 14px;
+  }
+
+  .modal-right a {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width:1500px) {
+.carousel-indicators{
+margin-bottom: -1rem !important;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+/* Zoom Overlay */
+
+
+#claa{
+  
+  display: none; 
+  position: fixed;
+   top: 0; 
+   left: 0;
+    width: 100%;
+     height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+       z-index: 1000; 
+       justify-content: center;
+        align-items: center;
+}
+#closeIcon{
+  position: absolute;
+   top: 20px;
+    right: 20px;
+     cursor: pointer;
+      font-size: 24px;
+       color: white;
+}
+
+
+
+
+#zoomOverlay{
+  display: flex;
+   flex-direction: column; 
+   align-items: center
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#zoomedImage{
+  /* max-width: 80%;  */
+  /* max-height: 80%; */
+   /* border-radius: 8px; */
+   width: 100%;
+  height: 88%;
+  border-radius: 0px;
+  object-fit: cover;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#imageDescription{
+  color: rgb(0, 0, 0); 
+  margin-top: 0px; 
+  font-size: 16px;
+   text-align: center;
+}
+.zoom-overlay {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 25%;
+  right: 25%;
+  width: 50%;
+  height: 60%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden; 
+}
+
+
+
+
+
+
+
+
+.zoom-overlay img {
+  width: 100%;
+  height: 90%;
+  border-radius: 0px;
+  object-fit: cover;
+  display: block;
+  /* transform: scale(0); Initially not visible */
+    /* transition: transform 1s ease-in-out; Smooth zoom-in effect */
+}
+
+
+
+
+
+
+
+
+
+/* to fit img */
+/* .image-container {
+  width: 300px; 
+  height: 200px;
+  overflow: hidden; 
+  border: 2px solid #000;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+} */
+
+
+
+
+
+
+
+.zoom-overlay div{
+  margin-top: 0px;
+  background-color: white;
+  color: black;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style the heading with the green line underneath */
+
+  
+
+#portfolio h1 {
+    display: inline;  /* Ensure the text and line are inline */
+    margin-right: 10px;  /* Space after the heading */
+}
+
+#portfolio h1::after {
+    content: "";  /* No text content, just a line */
+    display: inline-block;  /* Keeps the line inline with the heading */
+    width: 50px;  /* Length of the green line */
+    height: 2px;  /* Thickness of the green line */
+    background-color: rgba(3,237,108,0.85);  /* Green color for the line */
+    margin-left: 5px;  /* Space between text and line */
+    vertical-align: middle;
+}
+
+/* remove boldness from all h1 heading */
+#portfolio h1 {
+  font-weight: normal;  /* Remove boldness from these specific headings */
+  display: inline;  /* Keep the heading inline */
+  font-size: 1rem;
+  letter-spacing: 1.6px;
+  font-weight: 700;
+  color: white;
+}
+
+
+#portfolio h2{
+  font-family: "Poppins", sans-serif;
+  font-size: 35px;
+  font-weight: 900;
+  margin-top: 2px;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Adjust the font size and container size for small devices (mobile) */
+@media screen and (max-width: 768px) {
+  .black-box {
+    width: 90%;            /* 90% width on smaller screens */
+    padding-left: 5%;      /* 5% padding on the left */
+    padding-right: 5%;     /* 5% padding on the right */
+  }
+
+.filter-buttons{
+  gap: 8px;
+  font-size: 10px;
+  /* width: 20px; */
+}
+
+.filter-btn{
+  width: 46px;
+  margin-inline: 6px;
+
+}
+
+  .grid {
+    grid-template-columns: 2fr; /* 2 project per row */
+  }
+
+  .project-container {
+    padding: 15px; /* Slightly smaller padding on mobile */
+  }
+
+  .project-title {
+    font-size: 1.2em; /* Slightly smaller title font on mobile */
+  }
+
+  .project-description {
+    font-size: 0.9em; /* Slightly smaller description font */
+  }
+}
+
+/* Adjust the font size and container size for medium devices (tablets) */
+@media screen and (max-width: 1024px) {
+  .black-box {
+    width: 90%;            /* 90% width on smaller screens */
+    padding-left: 5%;      /* 5% padding on the left */
+    padding-right: 5%;     /* 5% padding on the right */
+  }
+
+
+
+
+  .project-container {
+    padding: 18px; /* Adjust padding for medium devices */
+  }
+
+  .project-title {
+    font-size: 1.4em; /* Slightly smaller title for tablets */
+  }
+
+  .project-description {
+    font-size: 1em; /* Keep description size the same for tablets */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

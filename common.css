@@ -1,0 +1,497 @@
+
+
+/* This will make navigation to sections smooth and feel modern. */
+html {
+    scroll-behavior: smooth;
+  }
+   
+  
+  
+  
+  
+  /* body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+  } */
+  
+  /* header */
+  
+  /* Sticky Header Styling */
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    /* background-color: #000000; */
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    opacity: 80%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 0;
+    
+  }
+
+
+
+  
+  /* Container to hold the logo and navigation */
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 55px;
+  }
+
+  
+  
+  
+  
+  /* Logo Styling */
+  .logo {
+    font-size: 40px;
+    font-weight: bolder;
+    color: #ffffff;
+  }
+  
+  /* Navigation Styling */
+  .navigation {
+    display: flex;
+    gap: 20px;
+    /* right: 4vw !important; */
+    margin-left: 38vw;
+  }
+  
+  
+  /* Navigation Link Styling */
+  .navigation a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #c8c8c8;
+    position: relative;
+    transition: color 0.3s ease;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-weight:500;
+    letter-spacing: 0.6px;
+  }
+  
+ 
+
+
+  /* Active Link Styling with Green Underline */
+  .navigation a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color: #18D263;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+
+
+  
+  /* Hover Effect for Navigation Items (0% to 50% Green Underline) */
+  .navigation a:hover {
+    color: #ffffff;;
+  }
+  
+  .navigation a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50%; /* Change from 0% to 50% */
+    height: 2px;
+    background-color: rgb(0, 255, 0);
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  /* Default Underline (width 0% initially) */
+  .navigation a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(0, 255, 0);
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+/* footer  */
+footer {
+    position: fixed;               /* Fix the footer at the bottom right */
+    bottom: 20px;                  /* Set distance from the bottom */
+    right: 10px;                   /* Set distance from the right */
+    /* background-color: transparent; Make the background transparent */
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 1px;
+    border-color: rgba(0, 0, 0, 0,4);
+    backdrop-filter: blur(10px);
+    font-size: 14px;               /* Optional: adjust text size */
+    font-family: Arial, sans-serif;/* Optional: set font family */
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+    padding: 5px 10px;             /* Optional: add some padding around the text */
+    z-index: 1000;                 /* Ensure the footer stays on top of other content */
+  }
+  
+  .design-text {
+    color: white;                 /* "Design" text color is white */
+  }
+  
+  .ankush-text {
+    color: #18D263;                 /* "Ankush" text color is green */
+    /* Apply text-shadow */
+
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.616);
+
+
+  }
+  
+  /* Ensure there is space between content and footer */
+  .parent-container {
+    margin-bottom: 50px;           /* Adjust this value to create space for the footer */
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 1200px) {
+    footer {
+      position: fixed;                /* Fix the footer at the bottom */
+      bottom: 0;                       /* Stick it to the very bottom of the page */
+      left: 0;                         /* Ensure it stretches the full width */
+      width: 100%;                     /* Footer takes up full width */
+      background-color: rgb(0, 0, 0,0.8); /* Light black transparent background */
+      backdrop-filter: blur(10px);
+      height: 5vh;                     /* Set footer height to 7% of the viewport height */
+      display: flex;                   /* Use flexbox for centering content */
+      justify-content: center;         /* Center horizontally */
+      align-items: center;             /* Center vertically */
+      z-index: 1000;                   /* Ensure it's above other elements */
+    }
+    
+    .design-text, .ankush-text {
+      color: white;                   /* Ensure text is white for visibility */
+      font-size: 14px;                 /* Optional: adjust text size */
+      font-family: Arial, sans-serif;  /* Optional: set font family */
+    }
+  
+    .ankush-text {
+      color: #18D263;                   /* "Ankush" text color is green */
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hamburger Icon (initially hidden) */
+/* .hamburger { */
+  /* display: none; */
+  /* font-size: 30px; */
+  /* color: #ffffff; */
+  /* cursor: pointer; */
+  /* right: 2px; */
+/* } */
+.hamburger,
+.close-icon {
+  display: block;
+  font-size: 30px;
+  color: #ffffff;
+  cursor: pointer;
+  position: absolute;
+  top: 2vh; /* Adjust position as needed */
+  right: 4vw; /* Adjust position as needed */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth fade and transform */
+}
+
+/* Initially show hamburger icon */
+.hamburger {
+  display: none;
+  opacity: 1;
+  z-index: 1001; /* Ensure it's on top */
+}
+/* Hide hamburger icon when inactive */
+.hamburger.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: rotate(90deg); /* Rotate during fade-out */
+}
+
+/* Initially hide close icon */
+.close-icon {
+  color: #ffffff !important; /* White color for better contrast */
+  opacity: 0;
+  pointer-events: none;
+  transform: rotate(-90deg); /* Initial rotated position */
+  z-index: 1000; /* Below hamburger initially */
+}
+/* Show close icon when active */
+.close-icon.active {
+  color: #ffffff !important;
+  opacity: 1;
+  pointer-events: all;
+  transform: rotate(0deg); /* Rotate back to original */
+  z-index: 1001; /* Ensure it's on top */
+}
+
+
+.kllu{
+  display: none;
+}
+.kkuu{
+  display: none;
+}
+.mnav{
+  display: none;
+}
+/* Styling for Cross Icon */
+/* .close-icon { */
+  /* font-size: 20px; */
+  /* color: #ffffff; */
+  /* cursor: pointer; */
+  /* position: absolute; */
+  /* top: 2vh; */
+  /* right: 4vw; */
+  /* display: none; Hidden by default */
+/* } */
+
+
+/* Show the cross icon when active */
+.kkuu.active .close-icon {
+  display: block;
+  z-index: 999;
+}
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+
+.container{
+  max-width: none !important; /* Prevent restrictions from parent containers */
+    display: flex; /* Optional: Ensure layout works as intended */
+    width: 92vw !important; /* Ensure this rule is applied */
+  margin-right: 4vw !important;
+}
+
+
+
+  /* Logo adjustment for mobile */
+  .logo {
+      font-size: 30px;
+  }
+
+  /* Hide the normal navigation links on smaller screens */
+  .navigation {
+      display: none;
+      width: 100%;
+      justify-content: space-around;
+      align-items: center;
+  }
+
+  /* Display the hamburger icon */
+  .hamburger {
+      display: block;
+  }
+  .kllu{
+    display: none;
+  }
+  .mnav{
+    display: none;
+  }
+  /* Make the navigation visible when hamburger is clicked */
+  .kllu.active {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    height: 80vh;
+    width: 90.5vw;
+    border: 1px solid rgba(255, 255, 255, 0.700);
+    margin-right: 3vw !important;
+    margin-left: 3vw !important;
+    padding: 10px 0;
+}
+.kkuu.active {
+  display: flex;
+  /* flex-direction: column; */
+  background-color: rgb(0, 0, 0);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0vh;
+  left: 0;
+  height: 92vh;
+  width: 100vw;
+  /* border: 1px solid white; */
+  /* margin-right: 3vw !important; */
+  /* margin-left: 3vw !important; */
+  /* padding: 10px 0; */
+}
+.mnav.active{
+  display: flex;
+  flex-direction: column;
+  /* line-height: 5vh; */
+  gap: 2.5vh;
+}
+
+
+
+  
+  /* Navigation Link Styling */
+  .mnav a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #c8c8c8;
+    position: relative;
+    transition: color 0.3s ease;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-weight:500;
+    letter-spacing: 0.6px;
+  }
+  
+ 
+
+
+  /* Active Link Styling with Green Underline */
+  .mnav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 4vw;
+    height: 2px;
+    background-color: #18D263;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+
+
+  
+  /* Hover Effect for Navigation Items (0% to 50% Green Underline) */
+  .mnav a:hover {
+    color: #ffffff;
+  }
+  
+  .mnav a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 4vw; /* Change from 0% to 50% */
+    height: 2px;
+    background-color: rgb(0, 255, 0);
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  /* Default Underline (width 0% initially) */
+  .mnav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #18D263;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Make the links inside the navigation stack vertically */
+  /* .navigation a {
+      margin: 10px 0;
+  } */
+
+
+
+  
+}

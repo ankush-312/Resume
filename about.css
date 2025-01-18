@@ -1,0 +1,830 @@
+/* General Styles */
+*{
+  /* border: 2px solid green; */
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+}
+body {
+  font-family: 'Poppins', sans-serif;  /* More modern font */
+  color: white;
+  /* background-color: rgb(235, 0, 0); */
+  background-image: url('images/banner.png');
+  background-size: cover;
+  position: relative;
+  background-position: right;
+  background-attachment: fixed; /* Ensures background is fixed */
+  /* padding-top: 60px; Adjust to the height of your header to start background after it */
+}
+
+
+
+
+
+
+/* Add this to the existing black-box class */
+.black-box {
+  background-color: rgba(0, 0, 0, 0.9);  /* Keep the black background */
+  backdrop-filter: blur(9px);
+  /* opacity: 100%; */
+  padding: 0 0px;           /* Add left and right padding */
+  margin: 20px auto;         /* Optional: to center it horizontally with margin on top and bottom */
+  max-width: 1320px;         /* Optional: Limit the width of the black box */
+  padding: 25px;
+}
+
+
+
+
+
+
+/* about */
+#about {
+  padding: 0px;
+  font-family: Arial, sans-serif;
+  margin-top: 0px; /* Add top margin to create space if the black-box has a height */
+  margin-bottom:80px;
+}
+
+#about h2 {
+  margin-top: 1px;
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+#about h1 {
+  text-align: left;
+  /* font-size: 1.8rem; */
+  margin-bottom: 20px;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.left-section {
+  flex: 1;
+  margin-right: 20px;
+
+  display: flex;          /* Use Flexbox for alignment */
+  justify-content: center; /* Horizontally center the image */
+  align-items: center;    /* Vertically center the image */
+  height: 100%;           /* Ensure the container has a defined height */
+  width: 100%;            /* Optional: Adjust as per your layout */
+}
+
+.profile-img {
+  max-width: 100%;        /* Make the image responsive */
+  max-height: 100%;       /* Ensure it doesn't exceed the container */
+}
+
+
+.profile-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.right-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-section h3 {
+  margin-bottom: 1px;
+  color: rgba(3,237,108,0.85);
+  font-weight: bold;
+  font-size: 23px;
+  letter-spacing: 0.3px;
+}
+
+.right-section p {
+  margin: 7px 0;
+  font-style: italic;
+  letter-spacing: 0.3px;
+  color: white;
+  font-size: 1rem;
+}
+
+.details-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  line-height:40px;
+}
+
+.left-column, .right-column {
+  flex: 1;
+}
+
+.left-column p, .right-column p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+
+
+
+.icon {
+  font-style: normal;
+  margin-right: 10px;
+  font-size: 1rem;
+  color: rgba(3,237,108,0.85);
+}
+
+.right-section span {
+  font-weight: bold;
+}
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+  .skill {
+    flex: 0 1 100%; /* 1 per row */
+  }
+  .skill i {
+    font-size: 17px; /* Smallest icon size */
+  }
+
+  .skill h3 {
+    font-size: 3px !important; /* Smallest text size */
+  }
+  .skill p {
+    font-size: 5px !important;
+  }
+
+
+
+.left-section{
+  margin-right: 0 !important;
+}
+
+
+
+
+
+  .int {
+    flex: 0 1 100%; /* 1 per row */
+  }
+
+  .int i {
+    font-size: 14px !important; /* Smallest icon size */
+    margin-right: 7px !important;
+  }
+
+  .int h3 {
+    font-size: 3px !important; /* Smallest text size */
+  }
+}
+
+
+
+/* Mobile (Screen Width <= 768px) */
+/* Mobile (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .black-box {
+    width: 90%;            /* 90% width on smaller screens */
+    padding-left: 5%;      /* 5% padding on the left */
+    padding-right: 5%;     /* 5% padding on the right */
+  }
+
+
+
+
+  .left-section{
+    margin-right: 0 !important;
+  }
+
+
+  .left-column{
+    margin-bottom: 0px !important;
+  }
+
+  .left-column p{
+    margin: 0px;
+  }
+
+  /* About Section */
+  .about-container {
+    flex-direction: column;  /* Stack the left and right sections */
+    align-items: center;
+  }
+
+  .profile-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  .details-container {
+    flex-direction: column;  /* Stack the columns */
+    align-items: center;
+  }
+
+  .details-container .left-column,
+  .details-container .right-column {
+    width: 100%;  /* Full width for both columns */
+    margin-bottom: 10px;
+    /* iski wjah se hi uper media query m !important likhna pda */
+    /* text-align: center; */
+    /* margin-left: 30px; */
+  }
+
+
+  #contb{
+    justify-content: center;
+  }
+/* For mobile (one box per line) */
+.box {
+  flex: 0 1 100%; /* 1 per row */
+  width: 90%;
+}
+
+.box h3 {
+  font-size: 14px; /* Smaller title text */
+}
+
+.box p {
+  font-size: 12px; /* Smaller description text */
+}
+
+
+
+
+
+
+
+  /* Boxes (Projects, Clients, Experience) */
+
+
+  /* Skills Section (1 per line) */
+  .skill {
+    flex: 0 1 calc(50% - 20px); /* 2 per row */
+  }
+  .skill i {
+    font-size: 25px; /* Smaller icon size */
+  }
+
+  .skill h3 {
+    font-size: 9px !important; /* Smaller text size */
+  }
+  .skill p {
+    font-size: 6px !important;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  /* Interests Section (1 per line) */
+  .int {
+    flex: 0 1 calc(50% - 20px); /* 2 per row */
+  }
+
+  .int i {
+    font-size: 25px; /* Smaller icon size */
+  }
+
+  .int h3 {
+    font-size: 7px !important; /* Smaller text size */
+  }
+
+  
+  /* Adjust Font Sizes for Mobile */
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  /* Adjust container padding for mobile */
+  .parent-container {
+    padding: 10px;
+  }
+}
+
+/* Tablet (min-width: 769px and max-width: 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+
+
+  .black-box {
+    width: 90%;            /* 90% width on smaller screens */
+    padding-left: 5%;      /* 5% padding on the left */
+    padding-right: 5%;     /* 5% padding on the right */
+  }
+
+
+  .left-section{
+    margin-right: 0 !important;
+  }
+
+
+
+
+
+  .left-column{
+    margin-bottom: 0 !important;
+  }
+  .left-column p{
+    margin: 0px;
+  }
+
+
+
+
+  /* About Section */
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  .details-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details-container .left-column,
+  .details-container .right-column {
+    width: 100%;
+    margin-bottom: 10px;
+    /* text-align: center; */
+  }
+
+
+
+
+
+
+  
+
+
+  /* Boxes (Projects, Clients, Experience) */
+  /* #contb .box {
+    width: 48%;  /* Two boxes in one row */
+    /* display: inline-block;
+    text-align: center;
+    margin-bottom: 20px;
+  } */ 
+
+
+#contb{
+  justify-content: center;
+}
+  .box {
+    width: 45%;
+    flex: 0 1 calc(50% - 20px); /* 2 per row */
+  }
+
+  .box h3 {
+    font-size: 16px; /* Slightly smaller title text */
+  }
+
+  .box p {
+    font-size: 14px; /* Slightly smaller description text */
+  }
+
+
+
+
+  /* Skills Section (2 per row) */
+  .skill {
+    flex: 0 1 calc(33.33% - 20px); /* 3 per row */
+  }
+
+  .skill i {
+    font-size: 30px; /* Slightly smaller icon size */
+  }
+
+  .skill h3 {
+    font-size: 11px !important; /* Slightly smaller text size */
+  }
+  .skill p {
+    font-size: 7px !important;
+  }
+  .skill:nth-child(2n) {
+    margin-right: 0;  /* Remove right margin on every second item */
+  }
+
+
+
+
+
+
+
+
+  /* Interests Section (2 per row) */
+  .int {
+    flex: 0 1 calc(33.33% - 20px); /* 3 per row */
+  }
+
+  .int i {
+    font-size: 30px ; /* Slightly smaller icon size */
+  }
+
+  .int h3 {
+    font-size: 10px !important; /* Slightly smaller text size */
+  }
+
+
+  
+
+  .int:nth-child(2n) {
+    margin-right: 0;  /* Remove right margin on every second item */
+  }
+
+  /* Adjust Font Sizes for Tablet */
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.4em;
+  }
+
+  /* Adjust container padding for tablet */
+  .parent-container {
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+  #contb{
+    justify-content: center;
+  }
+    .box {
+      width: 45%;
+      flex: 0 1 calc(50% - 20px); /* 2 per row */
+    }
+  
+    .box h3 {
+      font-size: 16px; /* Slightly smaller title text */
+    }
+  
+    .box p {
+      font-size: 14px; /* Slightly smaller description text */
+    }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+/* container */
+
+#contb {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; Distribute boxes across the row */
+  align-items: center; /* Vertically center the boxes */
+  width: 100%; /* Full container width */
+  gap: 20px; /* Add space between the boxes */
+  margin-top: 30px; /* Add space from the previous section (About) */
+  padding: 30px;
+}
+
+.box {
+  position: relative;
+  flex: 1; /* Each box takes equal width */
+  height: 150px; /* Height of the box */
+  /* background-color: rgba(0, 0, 0, 0.3); Transparent black background */
+  aspect-ratio: 2.4/1; /* Ensures boxes maintain a square shape */
+  border-radius: 0.3px;
+  backdrop-filter: blur(6px); /* Glass effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden; /* To ensure circle stays within box bounds */
+  margin: 0 10px; /* Optional: add margin on the left and right of each box */
+  overflow: visible; /* Allow the smiley to overflow the box */
+  flex: 0 1 30%; /* Flex-grow is 0, flex-shrink is 1, and flex-basis is 30% of the row */
+  /* margin: 0 15px; Increase the space between boxes slightly */
+  /* background-color: #fff; Original background color */
+  background-color: rgba(71, 71, 71, 0.28); 
+  /* Transparent black background for the glass effect */
+
+}
+
+.box i {
+  font-size: 25px; /* Reduced size of the smiley icon */
+  position: absolute;
+  /* top: -20px; Moves the smiley icon up to show half inside and half outside */
+  top: -25px; /* Moves the smiley icon outside the box */
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(3,237,108,0.85);
+  
+  width: 50px; /* Width of the transparent circle */
+  height: 50px; /* Height of the transparent circle */
+  border-radius: 50%; /* Circular border */
+  background-color: rgba(71, 71, 71, 0.28); /* Transparent circle with low opacity */
+  border: none; /* Border around the circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Ensure icon stays in front */
+}
+
+.box h3 {
+  font-size: 45px; /* Slightly reduced font size for the number */
+  color: white;
+  margin: 0;
+  margin-top: 20px;
+  z-index: 2; /* Ensures text is above the icon */
+}
+
+.box p {
+  font-size: 18px; /* Slightly reduced font size for the text */
+  letter-spacing: 1px;
+  color: white;
+  font-weight: bold;
+  margin-top: 0.002px;
+  z-index: 2; /* Ensures text is above the icon */
+}
+
+/* Optional: Hover effect to increase opacity of the box */
+/* .box:hover { */
+  /* background-color: rgba(0, 0, 0, 0.3); Make the background darker on hover */
+/* } */
+
+
+
+/* Font Awesome Smiley Icon
+.box i:before {
+  content: "\f118"; /* Font Awesome Smiley Face */
+  /* font-family: "Font Awesome 5 Free"; /* Font Awesome Free font */
+  /* font-weight: 900; /* Bold weight */
+/* } */
+ /* */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* skills */
+
+#skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between boxes */
+  /* justify-content: center; Center the boxes horizontally */
+  margin-top: 50px; /* Space before the Skills section */
+  
+  justify-content: space-between; /* Ensures equal spacing between boxes */
+  /* gap: 20px; Adds spacing between boxes */
+  padding: 0 20px; /* Adds spacing from left and right borders */
+  margin-bottom: 50px; /* Adjust this value as needed */
+  
+}
+
+#skills h1 {
+  text-align: left; /* Align the heading to the left */
+  width: 100%; /* Make sure the heading takes up the full width */
+  margin: 0; /* Remove any default margin */
+  /* font-size: 1.5rem; */
+}
+
+.skill {
+  /* width: 15%; Reduced width */
+  height: 120px; /* Reduced height */
+  margin: 10px; /* Adds space between the boxes */
+  /* background: rgba(255, 255, 255, 0.2); Glass effect with transparency */
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow for depth */
+  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+ 
+      width: calc(23% - 20px); /* 4 items in a row with equal spacing */
+      /* height: 120px; */
+      margin: 0; /* Removes any extra margin */
+      background-color: rgba(255, 255, 255, 0.1); /* Low opacity for glass effect */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  }
+
+  .skill i{
+    color: white;
+    font-size: 45px;
+  }
+
+/* Hover effect to increase opacity */
+.skill:hover {
+  opacity: 0.8; /* Slightly increase opacity on hover */
+  background-color: rgba(255, 255, 255, 0.2); /* Increased opacity on hover */
+}
+
+
+.skill h3 {
+  font-size: 18px; /* Slightly reduced font size for the number */
+  color: white;
+  margin: 0;
+  margin-top: 20px;
+  z-index: 2; /* Ensures text is above the icon */
+}
+.skill p {
+  font-size: 10px; /* Slightly reduced font size for the number */
+  color: white;
+  margin: 0;
+  /* margin-top: 20px; */
+  z-index: 2; /* Ensures text is above the icon */
+}
+
+
+
+
+
+/* interst */
+#interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between boxes */
+  justify-content: center; /* Center the boxes horizontally */
+  padding: 0 20px;
+}
+
+#interests h1 {
+  text-align: left; /* Align the heading to the left */
+  width: 100%; /* Make sure the heading takes up the full width */
+  margin: 0; /* Remove any default margin */
+  /* font-size: 1.5rem; */
+}
+
+.int {
+  width: 23%; /* Each box takes 23% of the row width (4 boxes per row) */   
+  height: 5vw; /* Adjusted height for 4:1 ratio with width */
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+  border:none;
+  border-radius: 0.02px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left; /* Align text to the left */
+  display: flex;
+  align-items: center; /* Vertically center the icon and text */
+  justify-content: flex-start; /* Align items to the left */
+  transition: background-color 0.3s, opacity 0.3s; /* Smooth transition for hover effect */
+}
+.int h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.int:hover {
+  /* background-color: rgba(255, 255, 255, 0.2); Slightly increase opacity on hover */
+  opacity: 1; /* Increase opacity on hover */
+}
+.int i {
+  margin-right: 15px; /* Space between icon and text */
+  font-size: 24px; /* Icon size */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style the heading with the green line underneath */
+
+
+
+#about h1, #skills h1, #interests h1 {
+  display: inline;  /* Ensure the text and line are inline */
+  margin-right: 10px;  /* Space after the heading */
+}
+
+#about h1::after, #skills h1::after, #interests h1::after {
+  content: "";  /* No text content, just a line */
+  display: inline-block;  /* Keeps the line inline with the heading */
+  width: 50px;  /* Length of the green line */
+  height: 2px;  /* Thickness of the green line */
+  background-color: rgba(3,237,108,0.85);  /* Green color for the line */
+  margin-left: 5px;  /* Space between text and line */
+  vertical-align: middle;
+}
+
+/* remove boldness from all h1 heading */
+#about h1,#skills h1, #interests h1 {
+  font-weight: normal;  /* Remove boldness from these specific headings */
+  display: inline;  /* Keep the heading inline */
+  font-size: 1rem;
+  letter-spacing: 1.6px;
+  font-weight: 700;
+  color: white;
+}
+
+
+#about h2{
+  font-family: "Poppins", sans-serif;
+  font-size: 31px;
+  font-weight: 900;
+  margin-top: 2px;
+  color: white;
+  margin-bottom: 18px;
+}
+
+
+
+
+/* Add spinning or pulsing effects to icons. */
+
+.skill i:hover, .int i:hover {
+  animation: spin 0.09s linear;
+  color: rgb(0, 255, 0);
+  /* transform: scale(1.1); */
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+
+

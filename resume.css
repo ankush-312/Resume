@@ -1,0 +1,370 @@
+/* General Styles */
+*{
+  /* border: 2px solid green; */
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+}
+body {
+  
+  /* font-family: Arial, sans-serif; */
+
+ 
+  /* body { */
+    font-family: 'Poppins', sans-serif;  /* More modern font */
+  /* } */
+  
+  color: white;
+  /* background-color: rgb(235, 0, 0); */
+  background-image: url('images/banner.png');
+  background-size: cover;
+  position: relative;
+  background-position: right;
+  background-attachment: fixed; /* Ensures background is fixed */
+  /* padding-top: 60px; Adjust to the height of your header to start background after it */
+}
+
+/* body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.325);
+  z-index: 1;
+} */
+/* body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 157, 26, 0.5);  /* Black overlay with 50% opacity */
+  /* z-index: -1;  /* Make sure the overlay is behind the content */
+/* }  */
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+/* body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+} */
+
+/* header */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add this to the existing black-box class */
+.black-box {
+  background-color: rgba(0, 0, 0, 0.9);  /* Keep the black background */
+  backdrop-filter: blur(9px);
+  /* opacity: 100%; */
+  padding: 0 0px;           /* Add left and right padding */
+  margin: 20px auto;         /* Optional: to center it horizontally with margin on top and bottom */
+  max-width: 1320px;         /* Optional: Limit the width of the black box */
+  padding: 28px;
+}
+
+
+
+
+
+
+
+
+
+/* resume */
+#resume{
+    /* padding: 25px; */
+    font-family: Arial, sans-serif;
+    /* margin-top: 60px; Add top margin to create space if the black-box has a height */
+}
+#resume h1 {
+    text-align: left;
+    /* font-size: 1.8rem; */
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.header {
+  text-align: center;
+  background-color: rgba(3,237,108,0.85);
+  color: #121212;
+  padding: 20px 0;
+  font-size: 2em;
+  font-weight: bold;
+}
+.contc {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px 0;
+  padding: 0;
+  gap: 20px;
+}
+
+
+
+
+.left-section, .right-section {
+  flex: 1; 
+  /* Equal width for both sections */
+}
+
+
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  /* Change the flex direction to column for medium screens (like tablets) */
+  .contc {
+    flex-direction: column; /* Stack left and right sections */
+    align-items: center; /* Center the content */
+  }
+
+  .left-section,
+  .right-section {
+    width: 90%; /* Make each section 90% width */
+    margin-bottom: 20px; /* Add space between the sections */
+  }
+
+  .black-box {
+    width: 90%;            /* 90% width on smaller screens */
+    padding-left: 5%;      /* 5% padding on the left */
+    padding-right: 5%;     /* 5% padding on the right */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for small screens */
+  .left-section,
+  .right-section {
+    width: 100%; /* Full width for small screens */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .contc {
+    padding: 10px; /* Reduce container padding */
+  }
+
+  .black-box {
+    width: 90%;            /* 90% width on smaller screens */
+    padding-left: 5%;      /* 5% padding on the left */
+    padding-right: 5%;     /* 5% padding on the right */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.section h3 {
+  color: #ffffff;
+  font-size: 1.5em;
+  margin-top: 25px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.highlight {
+  color: rgba(3,237,108,0.85);
+  font-size: 17px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+ul {
+  padding-left: 20px;
+}
+li {
+  margin-bottom: 10px;
+}
+.timeline {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+
+
+
+
+.timeline .ero {
+  position: relative;
+  padding: 0 0 20px 30px; /* Adjust padding-left to align text and keep space for the circle */
+  margin-top: 0; /* No unnecessary margin */
+  border-left: 2px solid rgba(255, 255, 255, 0.2); /* Continuous vertical line */
+}
+
+.timeline .ero::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  left: -9px; /* Align the circle with the vertical line */
+  top: 0; /* Align the circle with the top of the text and line */
+  background: rgba(3,237,108,0.85);
+  border: 2px solid rgba(3,237,108,0.85);
+}
+
+
+
+
+
+
+.timeline .date {
+  display: inline-block; /* Inline block ensures the box fits the content */
+  padding: 2px 8px;
+  background-color: rgba(71, 71, 71, 0.28);
+  border: none;
+  border-radius: 0.4px;
+  color: white;
+  font-size: 0.9em;
+  margin-bottom: 10px; /* Space between date and text */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.isq{
+  color: white;
+   font-style:italic;
+   letter-spacing: 0.6px;
+    font-size:17px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style the heading with the green line underneath */
+/* resume heading k liye */
+  
+
+#resume h1 {
+    display: inline;  /* Ensure the text and line are inline */
+    margin-right: 10px;  /* Space after the heading */
+}
+
+#resume h1::after {
+    content: "";  /* No text content, just a line */
+    display: inline-block;  /* Keeps the line inline with the heading */
+    width: 50px;  /* Length of the green line */
+    height: 2px;  /* Thickness of the green line */
+    background-color: rgba(3,237,108,0.85);  /* Green color for the line */
+    margin-left: 5px;  /* Space between text and line */
+    vertical-align: middle;
+}
+
+/* remove boldness from all h1 heading */
+#resume h1 {
+  font-weight: normal;  /* Remove boldness from these specific headings */
+  display: inline;  /* Keep the heading inline */
+  font-size: 1rem;
+  letter-spacing: 1.6px;
+  font-weight: 700;
+  color: white;
+}
+
+
+#resume h2{
+  font-family: "Poppins", sans-serif;
+  font-size: 35px;
+  font-weight: 900;
+  margin-top: 2px;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
