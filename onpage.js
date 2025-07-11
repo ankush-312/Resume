@@ -1,16 +1,31 @@
 const projects = [
   {
+    title: "Anant: Systematic Stock Forecast Engine",
+    description: "Anant is a systematic stock forecast engine that predicts next-day closing prices using a combination of technical analysis, sentiment signals, fundamental data, and inter-stock influence. Built using Python, Streamlit, and libraries like TA-Lib, yFinance, scikit-learn, and FinBERT, the app features multiple modes, including self and influence-based forecasting.The project helped me strengthen my understanding of time series modeling, machine learning pipelines, Granger causality, sentiment analysis using NLP, and dashboard deployment. It also sharpened my skills in building integrated trading logic from scratch.",
+    skill:"python, machine learning, time series, streamlit, ta-lib, statsmodels, finbert",
+    category: "Ml",
+    // client: "ABC Tech",
+    date: "09 July, 2025",
+    url: "https://www.linkedin.com/posts/ankush-parmar-997640322_quant-machinelearning-trading-activity-7348557766518566912-uqCS?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFGbsYMBcGJCJpO9BqsWK0c6B_ARGGj5nfI",
+    images: [
+      "images/project1/a.png",
+    "images/project1/b.png",
+    "images/project1/c.png",
+    
+  ],
+}, 
+{
     title: "Personal Site",
     description: "This fully responsive personal website highlights my skills with sections like About Me, Skills, Projects, Resume, and Contact. Built using HTML, CSS, Bootstrap and JavaScript, it adapts seamlessly across devices. The project helped me improve my web development and design skills.",
     skill:"html, css, js, bootstrap, emailjs, git",
     category: "Web",
     // client: "ABC Tech",
     date: "18 January, 2025",
-    url: "http://www.project2.com",
+    url: "https://ankush-resume.onrender.com/",
     images: [
-      "images/project1/a.png",
-    "images/project1/b.png",
-    "images/project1/c.png",
+      "images/project2/a.png",
+    "images/project2/b.png",
+    "images/project2/c.png",
     
   ],
 },  
@@ -23,9 +38,9 @@ const projects = [
     date: "26 August, 2024",
     url: "https://www.linkedin.com/posts/ankush-parmar-997640322_dataanalysis-cricket-t202024-activity-7233539740963098626-G9rV/?utm_source=share&utm_medium=member_desktop",
     images: [
-      "images/project2/a.png",
-      "images/project2/b.png",
-      "images/project2/c.png",
+      "images/project3/a.png",
+      "images/project3/b.png",
+      "images/project3/c.png",
     ],
   },
   {
@@ -37,9 +52,9 @@ const projects = [
     date: "27 August, 2024",
     url: "https://portfolio-tb9s.onrender.com/",
     images: [
-      "images/project3/a.png",
-      "images/project3/b.png",
-      "images/project3/c.png",
+      "images/project4/a.png",
+      "images/project4/b.png",
+      "images/project4/c.png",
     ],
   },
   {
@@ -49,42 +64,14 @@ const projects = [
     category: "Analysis",
     // client: "ABC Tech",
     date: "30 July, 2024",
-    // url: "http://www.project2.com",
+    url: "http://www.project2.com",
     images: [
-      "images/project4/a.png",
-    "images/project4/b.png",
-    "images/project4/c.png",
+      "images/project5/a.png",
+    "images/project5/b.png",
+    "images/project5/c.png",
     ],
   },
-      
-        {
-          title: "Analog Clock",
-          description: "Created an analog clock using HTML, CSS, and JavaScript. Implemented dynamic hour, minute, and second hands with real-time updates for accurate time display.",
-          skill:"html, css, js",
-          category: "Web",
-          // client: "ABC Tech",
-          date: "15 January, 2025",
-          // url: "http://www.project2.com",
-          images: [
-            "images/project5/a.png",
-          "images/project5/b.png",
-          "images/project5/c.png",
-          ],
-        },
-  {
-    title: "V Card",
-    description: "Developed a responsive virtual business card using HTML, CSS, and JavaScript. Features dynamic contact details, social media links, and a sleek design for accessibility.",
-    skill:"html, css",
-    category: "Web",
-    // client: "ABC Tech",
-    date: "17 January, 2025",
-    // url: "http://www.project2.com",
-    images: [
-    "images/project6/a.png",
-    "images/project6/a.png",
-    "images/project6/a.png",
-    ],
-  },
+  
   {
       title: "Hotel Reservation Cancellation Analysis and Report Creation",
       description: " Modern web design for a portfolio.",
@@ -94,11 +81,40 @@ const projects = [
       date: "June,2024",
       url: " https://www.linkedin.com/posts/ankush-parmar-997640322_datascience-python-dataanalysis-activity-7233786131023097856-BIYa?utm_source=share&utm_medium=member_desktop",
       images: [
-        "images/project7/a.png",
-        "images/project7/b.png",
-        "images/project7/c.png",
+        "images/project6/a.png",
+        "images/project6/b.png",
+        "images/project6/c.png",
       ],
-    }
+    },
+      
+        {
+          title: "Analog Clock",
+          description: "Created an analog clock using HTML, CSS, and JavaScript. Implemented dynamic hour, minute, and second hands with real-time updates for accurate time display.",
+          skill:"html, css, js",
+          category: "Web",
+          // client: "ABC Tech",
+          date: "15 January, 2025",
+          url: "http://www.project2.com",
+          images: [
+            "images/project7/a.png",
+          "images/project7/b.png",
+          "images/project7/c.png",
+          ],
+        },
+  {
+    title: "V Card",
+    description: "Developed a responsive virtual business card using HTML, CSS, and JavaScript. Features dynamic contact details, social media links, and a sleek design for accessibility.",
+    skill:"html, css",
+    category: "Web",
+    // client: "ABC Tech",
+    date: "17 January, 2025",
+    url: "http://www.project2.com",
+    images: [
+    "images/project8/a.png",
+    "images/project8/a.png",
+    "images/project8/a.png",
+    ],
+  }
     // Add more projects as needed
   ];
   let currentImageIndex = 0;
