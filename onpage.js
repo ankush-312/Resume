@@ -14,21 +14,7 @@ const projects = [
     
   ],
 }, 
-{
-    title: "Personal Site",
-    description: "This fully responsive personal website highlights my skills with sections like About Me, Skills, Projects, Resume, and Contact. Built using HTML, CSS, Bootstrap and JavaScript, it adapts seamlessly across devices. The project helped me improve my web development and design skills.",
-    skill:"html, css, js, bootstrap, emailjs, git",
-    category: "Web",
-    // client: "ABC Tech",
-    date: "18 January, 2025",
-    url: "https://ankush-resume.onrender.com/",
-    images: [
-      "images/project2/a.png",
-    "images/project2/b.png",
-    "images/project2/c.png",
-    
-  ],
-},  
+
   {
     title: "T20 2024 Cricket World Cup Analysis",
     description: "Performed a detailed analysis of player statistics from the 2024 Cricket World Cup to identify the top-performing players and their contributions. Designed an interactive Power BI dashboard to present these insights, providing a clear and actionable overview to support team selection and performance evaluations.",
@@ -38,9 +24,67 @@ const projects = [
     date: "26 August, 2024",
     url: "https://www.linkedin.com/posts/ankush-parmar-997640322_dataanalysis-cricket-t202024-activity-7233539740963098626-G9rV/?utm_source=share&utm_medium=member_desktop",
     images: [
+      "images/project2/a.png",
+      "images/project2/b.png",
+      "images/project2/c.png",
+    ],
+  },
+  {
+    title: "Google Keep Clone",
+    description: "A responsive Google Keep clone built with HTML, CSS, and JavaScript. It lets users create, edit, and delete notes with data saved in Local Storage for persistence. This project strengthened my skills in DOM manipulation, event handling, and client-side data storage.",
+    skill:"html, css, js",
+    category: "Web",
+    // client: "ABC Tech",
+    date: "18 August, 2024",
+    url: "https://google-keep-clone-p5z1.onrender.com/",
+    images: [
       "images/project3/a.png",
-      "images/project3/b.png",
-      "images/project3/c.png",
+    "images/project3/b.png",
+    "images/project3/c.png",
+    
+  ],
+},  
+  {
+    title: "Personal Site",
+    description: "This fully responsive personal website highlights my skills with sections like About Me, Skills, Projects, Resume, and Contact. Built using HTML, CSS, Bootstrap and JavaScript, it adapts seamlessly across devices. The project helped me improve my web development and design skills.",
+    skill:"html, css, js, bootstrap, emailjs, git",
+    category: "Web",
+    // client: "ABC Tech",
+    date: "18 January, 2025",
+    url: "https://ankush-resume.onrender.com/",
+    images: [
+      "images/project4/a.png",
+    "images/project4/b.png",
+    "images/project4/c.png",
+    
+  ],
+},  
+{
+      title: "Hotel Reservation Cancellation Analysis and Report Creation",
+      description: " This project involves exploratory data analysis (EDA) on hotel reservation data to uncover patterns behind booking cancellations. Using Python, Pandas, Matplotlib, and Seaborn, key insights were drawn from features like lead time, customer type, market segment, and more. The analysis identified trends in cancellation behavior, peak booking periods, and customer preferences. A detailed report was created to support data-driven decision-making for reducing cancellations and improving customer retention.",
+      skill:"python, numpy, pandas, matplotlib, seaborn",
+      category: "Analysis",
+      // client: "Practice",
+      date: "June,2024",
+      url: " https://www.linkedin.com/posts/ankush-parmar-997640322_datascience-python-dataanalysis-activity-7233786131023097856-BIYa?utm_source=share&utm_medium=member_desktop",
+      images: [
+        "images/project5/a.png",
+        "images/project5/b.png",
+        "images/project5/c.png",
+      ],
+    },
+ {
+    title: "HR Analytics Dashboard",
+    description: "Designed an Attrition Rate Analysis module within an HR Analytics Dashboard using Power BI. Provided insights into employee turnover trends, key reasons for attrition, and retention patterns. Utilized DAX calculations to track attrition rates by department, tenure, and gender. Enabled HR teams to identify risks and implement targeted retention strategies.",
+    skill:"python, numpy, pandas, power bi",
+    category: "Analysis",
+    // client: "ABC Tech",
+    date: "30 July, 2024",
+    url: "http://www.project2.com",
+    images: [
+      "images/project6/a.png",
+    "images/project6/b.png",
+    "images/project6/c.png",
     ],
   },
   {
@@ -52,40 +96,14 @@ const projects = [
     date: "27 August, 2024",
     url: "https://portfolio-tb9s.onrender.com/",
     images: [
-      "images/project4/a.png",
-      "images/project4/b.png",
-      "images/project4/c.png",
+      "images/project7/a.png",
+      "images/project7/b.png",
+      "images/project7/c.png",
     ],
   },
-  {
-    title: "HR Analytics Dashboard",
-    description: "Designed an Attrition Rate Analysis module within an HR Analytics Dashboard using Power BI. Provided insights into employee turnover trends, key reasons for attrition, and retention patterns. Utilized DAX calculations to track attrition rates by department, tenure, and gender. Enabled HR teams to identify risks and implement targeted retention strategies.",
-    skill:"python, numpy, pandas, power bi",
-    category: "Analysis",
-    // client: "ABC Tech",
-    date: "30 July, 2024",
-    url: "http://www.project2.com",
-    images: [
-      "images/project5/a.png",
-    "images/project5/b.png",
-    "images/project5/c.png",
-    ],
-  },
+ 
   
-  {
-      title: "Hotel Reservation Cancellation Analysis and Report Creation",
-      description: " Modern web design for a portfolio.",
-      skill:"python, numpy, pandas, matplotlib, seaborn",
-      category: "Analysis",
-      // client: "Practice",
-      date: "June,2024",
-      url: " https://www.linkedin.com/posts/ankush-parmar-997640322_datascience-python-dataanalysis-activity-7233786131023097856-BIYa?utm_source=share&utm_medium=member_desktop",
-      images: [
-        "images/project6/a.png",
-        "images/project6/b.png",
-        "images/project6/c.png",
-      ],
-    },
+  
       
         {
           title: "Analog Clock",
@@ -96,9 +114,9 @@ const projects = [
           date: "15 January, 2025",
           url: "http://www.project2.com",
           images: [
-            "images/project7/a.png",
-          "images/project7/b.png",
-          "images/project7/c.png",
+            "images/project8/a.png",
+          "images/project8/b.png",
+          "images/project8/c.png",
           ],
         },
   {
@@ -110,9 +128,9 @@ const projects = [
     date: "17 January, 2025",
     url: "http://www.project2.com",
     images: [
-    "images/project8/a.png",
-    "images/project8/a.png",
-    "images/project8/a.png",
+    "images/project9/a.png",
+    "images/project9/b.png",
+    "images/project9/c.png",
     ],
   }
     // Add more projects as needed
