@@ -12,7 +12,7 @@ body {
   font-family: 'Poppins', sans-serif;  /* More modern font */
   color: white;
   /* background-color: rgb(235, 0, 0); */
-  background-image: url('images/banner.png');
+  background-image: url('images/imgw_dark.png');
   background-size: cover;
   position: relative;
   background-position: right;
@@ -69,22 +69,38 @@ body {
   margin-bottom: 20px;
 }
 
-.left-section {
+/* .left-section {
   flex: 1;
   margin-right: 20px;
 
   display: flex;          /* Use Flexbox for alignment */
-  justify-content: center; /* Horizontally center the image */
-  align-items: center;    /* Vertically center the image */
-  height: 100%;           /* Ensure the container has a defined height */
-  width: 100%;            /* Optional: Adjust as per your layout */
-}
+  /* justify-content: center; Horizontally center the image */
+  /* align-items: center;    Vertically center the image */
+  /* height: 100%;           Ensure the container has a defined height */
+  /* width: 100%;            Optional: Adjust as per your layout */
+/* } */
 
-.profile-img {
+/* .profile-img {
   max-width: 100%;        /* Make the image responsive */
-  max-height: 100%;       /* Ensure it doesn't exceed the container */
+  /* max-height: 100%;       Ensure it doesn't exceed the container */
+/* } */ 
+
+
+.left-section{
+flex:1;
+margin-right:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:400px;
 }
 
+.profile-img{
+max-height:350px;
+width:auto;
+/* height:400px; */
+object-fit:contain;
+}
 
 .profile-img {
   width: 100%;

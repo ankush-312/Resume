@@ -11,7 +11,7 @@
     font-family: 'Poppins', sans-serif;  /* More modern font */
     color: white;
     background-color: black;
-    /* background: url('images/banner.png') no-repeat center center/cover; Background image */
+    /* background: url('images/network_imgw.png') no-repeat center center/cover; Background image */
   
     z-index: 1; 
   }
@@ -24,7 +24,7 @@
     align-items: center;
     height: 100vh;
     text-align: center;
-    background: url('images/banner_inedex.png') no-repeat center center/cover;  /* Background image */
+    background: url('images/network_imgw.png') no-repeat center center/cover;  /* Background image */
     background-size: cover;
     background-position: right;
     position: relative;
@@ -54,15 +54,18 @@
     font-weight: bold; /* Make it stand out */
   }
 
-  
   header h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
   }
   
-  header p {
+  .intro {
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
+  }
+  .typing {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
   
   header nav {
@@ -173,6 +176,7 @@ nav a.active::after {
     header p {
       font-size: 1.75rem;
     }
+   
   }
   
 
